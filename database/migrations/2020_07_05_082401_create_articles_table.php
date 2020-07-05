@@ -19,7 +19,6 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->string('slug', 120);
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
