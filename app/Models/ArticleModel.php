@@ -9,7 +9,7 @@ use Carbon\Carbon;
 class ArticleModel
 {
     // Create
-    public static function create($request)
+    public static function save($request)
     {
 
         $slug = Str::slug($request['title'], '-');

@@ -20,8 +20,14 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        $new_article = ArticleModel::create($request->all());
+        $new_article = ArticleModel::save($request->all());
         return redirect('/artikel');
+    }
+
+    public function show($id)
+    {
+        $article = ArticleModel::getById($id);
+        return view('article.show', compact('article'));
     }
 
     public function edit($id)
