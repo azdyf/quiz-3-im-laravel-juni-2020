@@ -19,6 +19,7 @@
         <span>| Updated at:
             {{ Carbon\Carbon::parse($article->updated_at)->format('d F Y H:i:s') }}</span>
         @endif
+        <p class="mt-3">Slug: {{ $article->slug }}</p>
     </div>
     <div class="card-body">
         <p>
