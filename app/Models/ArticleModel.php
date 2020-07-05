@@ -29,6 +29,12 @@ class ArticleModel
         return DB::table('articles')->get();
     }
 
+    // Read By Id
+    public static function getById($id)
+    {
+        return DB::table('articles')->where('id', $id)->first();
+    }
+
     // Update
     public static function update($id, $request)
     {
